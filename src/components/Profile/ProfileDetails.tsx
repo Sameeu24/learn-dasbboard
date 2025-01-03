@@ -9,18 +9,18 @@ interface ProfileDetailsProps {
 
 export default function ProfileDetails({ institution, careerPath, interests }: ProfileDetailsProps) {
   return (
-    <div className="grid grid-cols-2 gap-6">
-      <div className="space-y-6">
+    <div className="space-y-6">
+      <div className="grid grid-cols-2 gap-6">
         <div>
           <p className="text-sm text-gray-500 mb-1">Institution</p>
           <p className="font-medium">{institution}</p>
         </div>
-        <div>
+        <div className="text-right">
           <p className="text-sm text-gray-500 mb-1">Career Path</p>
           <p className="font-medium">{careerPath}</p>
         </div>
       </div>
-      
+
       <div>
         <div className="flex justify-end mb-4">
           <button className="p-2 hover:bg-gray-50 rounded-full">
@@ -29,7 +29,7 @@ export default function ProfileDetails({ institution, careerPath, interests }: P
         </div>
         <div>
           <p className="text-sm text-gray-500 mb-2">Interests</p>
-          <div className="flex flex-wrap gap-2">
+          <div className="flex flex-wrap ">
             {interests.map((interest) => (
               <span
                 key={interest}
